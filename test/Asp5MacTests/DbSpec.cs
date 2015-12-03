@@ -22,7 +22,13 @@ public class MyContext: DbContext {
     public DbSet<Info> Infoes {set;get;}
 
     protected override void OnConfiguring(DbContextOptionsBuilder builder) {
-        builder.UseNpgsql("Server=192.168.0.105;Port=5432;Database=Asp5; User Id=tfo;Password=abcABC123;");
+        //builder.UseNpgsql("Server=192.168.0.105;Port=5432;Database=Asp5; User Id=tfo;Password=abcABC123;");
+        builder.UseNpgsql("Server=192.168.0.105;Port=5432;Database=Asp5; User Id=wk;Password=1234;");
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.HasDefaultSchema("public");
     }
 }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System;
 
-namespace Asp5Mac {
+namespace Asp5Mac.Controllers {
 
     [Route("api/[controller]")]
     public class SpeakController: Controller {
